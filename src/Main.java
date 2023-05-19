@@ -6,8 +6,8 @@ public class Main {
         qn.enQ(5);
         qn.enQ(10);
         qn.enQ(15);
-
-        qn.remove();
+        qn.deQ();
+        System.out.println(qn.remove());
         qn.deQ();
 
         //stack execution

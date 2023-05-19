@@ -9,6 +9,7 @@ public class QueueByLinked {
         }
     }
         node front, rear;
+    int size = 0;
 
     //default constructor
     public QueueByLinked(){
@@ -29,29 +30,33 @@ public class QueueByLinked {
     }
 
     public void deQ(){
-        if( front == null){
+        node current = front;
+        if( current == null){
             System.out.println("empty");
             System.exit(1);
         }
-        while(front != null) {
-            System.out.println(front.item + " ");
-            front = front.next;
+        while(current != null) {
+            System.out.println(current.item + " ");
+            current = current.next;
         }
         }
 
-    public void remove(){
-        if( front == null)
-            System.out.println("empty");
-        else if (front == rear) {
-
-            // Both are pointing to same element
-            front = rear = null;
+    public boolean remove() {
+        node current = front;
+        if (front == null) {
+            return false;
         }
-        else
-            front = front.next;
+
+        while (current.next != null) {
+            current = current.next;
+            return true;
+        }
+        return false;
     }
 
-    }
+}
+
+
 
 
 
