@@ -54,10 +54,11 @@ public class StackByLinked {
      public void remove(){
          if(head == null){
              System.out.println("empty");
-             System.exit(1);
          }
-         node temp = head;
-         head = head.next;
-         size--;
+         else {
+             node temp = head;
+             head = head.next;
+             size--;
+         }
      }
 }

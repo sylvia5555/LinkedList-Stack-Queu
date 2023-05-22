@@ -28,9 +28,16 @@ public class Main {
         n1.frontAdd(10);
         n1.frontAdd(20);
         n1.frontAdd(30);
+        n1.display();   //30 20 10
+        System.out.println("after removing: ");
+        n1.removeFront();   //20 10
         n1.display();
-        n1.remove();
+//        n1.insertInBetween(n1.head.next, 5); //30 20 5 10
+//        n1.display();
+
+        n1.addAtIndex(1, n1.head);
         n1.display();
+
 
     }
 }
