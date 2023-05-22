@@ -33,7 +33,6 @@ public class QueueByLinked {
         node current = front;
         if( current == null){
             System.out.println("empty");
-            System.exit(1);
         }
         while(current != null) {
             System.out.println(current.item + " ");

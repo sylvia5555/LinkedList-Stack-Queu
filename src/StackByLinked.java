@@ -27,21 +27,23 @@ public class StackByLinked {
      public int pop(){
          if(head == null) {
              System.out.println("empty");
-             System.exit(1);
+             return -1;
          }
-
-         int item = head.item;
-         head = head.next;
-         return item;
+         else {
+             int item = head.item;
+             head = head.next;
+             return item;
+         }
      }
 
      //peek: return the top
      public int peek(){
          if(head == null){
              System.out.println("empty");
-             System.exit(1);
+             return -1;
          }
-         return head.item;
+         else
+            return head.item;
      }
 
      public void display(){
